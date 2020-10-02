@@ -5,6 +5,9 @@ export class UserLibrary {
 
     private readonly _jwtSecret = process.env['ACCESS_TOKEN_SECRET'];
 
+    /**
+     * This method creates access token with user infos and secret key
+     */
     public generateAccessToken(u: User): object {
         const { id, email, firstname, lastname, phoneNumber, isActive} = u;
 

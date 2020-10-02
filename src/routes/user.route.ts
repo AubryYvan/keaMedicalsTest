@@ -10,8 +10,14 @@ import {catchError} from '../middlewares/catchError';
 import { authenticator } from '../middlewares/authenticateToken';
 import {UserValidator} from '../validators/user.validator';
 
+/**
+ * Routing
+ */
 class userRoute {
 
+    /**
+     * config routing for userController
+     */
     public config(app: Application) {
 
         app.route("/register")

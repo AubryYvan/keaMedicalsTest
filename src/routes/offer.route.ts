@@ -11,8 +11,14 @@ import {catchError} from '../middlewares/catchError';
 import {OfferValidator, applicationValidator} from '../validators/offer.validator';
 import {File} from '../middlewares/uploadFiles';
 
+/**
+ * Routing
+ */
 class offerRoute {
 
+    /**
+     * config Routing for offerController
+     */
     public config(app: Application) {
 
         app.route("/admin/offer")

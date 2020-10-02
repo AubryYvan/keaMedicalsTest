@@ -9,6 +9,9 @@ import { NextFunction, Response, Request } from "express";
 import { plainToClass, classToPlain } from "class-transformer";
 import {responseErrors} from '../middlewares/catchError';
 
+/**
+ * Forms validator middlewares
+ */
 export const formValidator = (dtoClass: any, groups: string[] = []) => {
     return function (req: Request, res: Response, next: NextFunction) {
         const output: any = plainToClass(dtoClass, req.body, { groups, enableImplicitConversion: true });

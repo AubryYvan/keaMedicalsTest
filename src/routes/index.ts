@@ -1,4 +1,4 @@
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -9,6 +9,9 @@ import path from 'path';
 import { Application } from "express";
 var basename  = path.basename(__filename);
 
+/**
+ * load all routes for defined in project
+ */
 export = (app: Application) => {
     fs
     .readdirSync(__dirname)
