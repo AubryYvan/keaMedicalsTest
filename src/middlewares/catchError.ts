@@ -1,5 +1,9 @@
 import { Response, Request, NextFunction } from "express"
 
+
+/**
+ * message format general for error
+ */
 export const responseErrors = () => {
     return {
         message: 'une erreur interne est survenue. Veuillez reessayer plutard !',
@@ -7,16 +11,14 @@ export const responseErrors = () => {
     };
 };
 
+/**
+ * catch error handler for all methods
+ */
 export const catchError = (handler: Function) => {
     return async (req: Request, res: Response, next: NextFunction) => {
         try {
             await handler(req, res);
         } catch (error) {
-            console.log(error)
-            //next(error);
-            const response = error.response;
-            if (response) return res.status(response.status).json(response.data);
-
             return res.status(500).json(responseErrors());
         }
     };

@@ -52,6 +52,5 @@
   "scripts": {
     "start": "NODE_ENV=production npx tsc && node dist/index.js",
     "dev": "concurrently -n \"TS, Node\" \"npx tsc --watch\" \"nodemon dist/index.js\""
-  },
-  "keywords": []
+  }
 }

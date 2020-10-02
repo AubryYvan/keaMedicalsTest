@@ -3,6 +3,13 @@ import { UploadedFile } from 'express-fileupload';
 
 class Files {
 
+    /**
+     * this methods handles updload files
+     *
+     * @param req Request
+     * @param res Response
+     * @param next NextFunction
+     */
     async uploadFiles (req: Request, res: Response, next: NextFunction) {
 
         if (req.files && req.files['document']) {
@@ -11,6 +18,7 @@ class Files {
                 return res.status(400).json({
                     message: "Formulaire invalide",
                     errors: [{
+                        property: "document",
                         message: "le document doit être un pdf"
                     }]
                 });

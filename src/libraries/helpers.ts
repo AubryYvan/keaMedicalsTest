@@ -2,6 +2,9 @@ import Role from '../models/role';
 import User from '../models/user';
 import {sequelize} from '../models/index';
 
+/**
+ * this methods save administrator role in database
+ */
 export const loadRoles = async () => {
     const roles = [ {name: 'Role_Admin'} ];
 
@@ -14,6 +17,9 @@ export const loadRoles = async () => {
     }
 }
 
+/**
+ * This methods save user Administrator in database
+ */
 export const loadAdmin = async () => {
 
     const admin = {
