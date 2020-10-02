@@ -4,7 +4,7 @@
     "password": "admin",
     "database": "kea_medicals",
     "host": "127.0.0.1",
-    "port": "54320",
+    "port": "5432",
     "dialect": "postgres"
   },
   "test": {
@@ -19,7 +19,7 @@
     "password": "admin",
     "database": "kea_medicals",
     "host": "127.0.0.1",
-    "port": "54320",
+    "port": "5432",
     "dialect": "postgres"
   }
 }
