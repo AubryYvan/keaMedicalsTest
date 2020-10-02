@@ -30,6 +30,8 @@ L’application comporte 2 types d’utilisateurs : Un administrateur et les ca
 
 Les informations de connexion pour le compte administrateur sont les suivants : {phoneNumber : 237693200781, password : "keaMedicals"}
 
+Remarque: VOUS POUVEZ AUSSI IMPORTER LA COLLECTION SUIVANTE: https://www.getpostman.com/collections/d5ee5a6c7ecf011cae40
+
 1. creation de compte d’un candidat:
 
 endpoint : http://localhost:8000/register
